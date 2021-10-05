@@ -219,10 +219,14 @@ public class CustomerAccountCard extends AppCompatActivity {
                                 editText1.setError("Name is required");
                             }else if (cardNum.isEmpty()) {
                                 editText2.setError("Card Number is required");
+                            }else if (cardNum.length() > 16) {
+                                editText2.setError("Invalid Card Number");
                             }else if (expireDate.isEmpty()) {
                                 editText3.setError("Expire date Number is required");
                             }else if (Csv.isEmpty()) {
                                 editText4.setError("Csv is required");
+                            }else if (Csv.length() > 3) {
+                                editText2.setError("Invalid Csv Number");
                             }else if (bank.isEmpty()) {
                                 editText5.setError("Bank name is required");
                             }else {
