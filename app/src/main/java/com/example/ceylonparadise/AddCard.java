@@ -56,6 +56,8 @@ public class AddCard extends AppCompatActivity {
                     editText3.setError("Expire date Number is required");
                 }else if (Csv.isEmpty()) {
                     editText4.setError("Csv is required");
+                }else if (Csv.length() > 3) {
+                    editText2.setError("Invalid Csv Number");
                 }else if (bank.isEmpty()) {
                     editText5.setError("Bank name is required");
                 }else {

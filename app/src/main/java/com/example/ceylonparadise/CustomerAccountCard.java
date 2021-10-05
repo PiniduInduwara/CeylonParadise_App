@@ -140,7 +140,7 @@ public class CustomerAccountCard extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     final AlertDialog alertDialog = new AlertDialog.Builder(getContext())
-                            .setTitle("Do you want to delete this item?")
+                            .setTitle("Do you want to delete this card?")
                             .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialogInterface, int i) {
@@ -148,7 +148,7 @@ public class CustomerAccountCard extends AppCompatActivity {
                                     final String idd = user.get(position).getCardNumber();
                                     FirebaseDatabase.getInstance().getReference("CardDetils").child(idd).removeValue();
                                     //remove function not written
-                                    Toast.makeText(myContext, "Item deleted successfully", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(myContext, "Card deleted successfully", Toast.LENGTH_SHORT).show();
 
                                 }
                             })
